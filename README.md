@@ -7,4 +7,4 @@
 
 
 <p> Please see my blog at https://gtgb.io for more information.
-Geek The Grey Bear</p>
+Geek The Grey Beard</p>
