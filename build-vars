@@ -7,7 +7,7 @@ build_vm_id='ENTER-VMID-FOR-TEMPLATE'
 install_dir='/WHAT-DIRECTORY-ARE-WE-IN/'
 
 # Who are you?
-creator="YOURNAMEHERE"
+creator='YOURNAMEHERE'
 
 # Create this file and add your SSH keys 1 per line
 keyfile=${install_dir}keyfile
@@ -41,7 +41,7 @@ cloud_init_user='CLOUD-INIT-USERNAME-HERE'
 scsihw='virtio-scsi-pci'
 
 # What to name your template. This is free form with no spaces and will be used for automation/deployments.
-template_name "YOUR-TEMPLATE-NAME"
+template_name 'YOUR-TEMPLATE-NAME'
 
 # Memory and CPU cores. These are overridden with image deployments or through the PVE interface.
 vm_mem='2048'
