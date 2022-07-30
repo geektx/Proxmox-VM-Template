@@ -27,6 +27,9 @@ echo "Build creator: "${creator} >> ${install_dir}build-info
 virt-customize --update -a ${image_name}
 virt-customize --install ${package_list} -a ${image_name}
 virt-customize --mkdir ${build_info_file_location} --copy-in ${install_dir}build-info:${build_info_file_location} -a ${image_name}
+# Clean up dangling machine-id that could be in either /etc/machine-id or /etc/machine-info
+virt-customize --touch /etc/machine-id --touch /etc/machine-info --truncate /etc/machine-id --truncate /etc/machine-info -a ${image_name}
+
 qm destroy ${build_vm_id}
 qm create ${build_vm_id} --memory ${vm_mem} --cores ${vm_cores} --net0 virtio,bridge=vmbr0 --name ${template_name}
 qm importdisk ${build_vm_id} ${image_name} ${storage_location}
